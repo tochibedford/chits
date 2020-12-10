@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- font-awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+	<title>Chits | Share To</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			border: 0px;
+			-webkit-user-select: none;
+		}
+		body{
+			background-color: #A61C3C;
+		}
+		.app{
+			border-style: inset;
+			border-radius: 2px;
+			border: 3px solid #92BFB1; 
+			overflow-y: hidden;
+		}
+		.chitsId::before{
+			content:"UserId";
+			color: white;
+			padding-right: 0.2em;
+		}
+		.navbar{
+			-webkit-user-select: none;
+			-webkit-app-region: drag;
+		}
+		.collapse, .navbar-nav, .navbar-toggler{
+			-webkit-app-region: no-drag;
+		}
+		.app{
+			background-color: #A61C3C;
+			color: #DAD6D6;
+			height: 100vh;
+		}
+		.mainBody{
+			width: 100%;
+		}
+		.friend{
+			height: 2em;
+			width:100%;
+			border-radius: 3px;
+			display: flex;
+			/*text-align: center;*/
+			align-items: center;
+			justify-content: start;
+			transition: background-color 0.3s ease-in-out;
+		}
+		.friend:hover{
+			background-color: #F4AC45;
+			color: black;
+			justify-content: center;
+			
+		}
+		.friendName{
+			overflow: 'hidden';
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		.itemm{
+			flex:1;
+			max-width: 150px;
+			overflow: hidden;
+			white-space: nowrap;
+			font-weight: bold;
+			transition: flex 0.4s ease-out;
+		}
+		.itemm:hover{
+			flex: 3;
+		}
+		.itemMain{
+			flex: 6;
+			padding-left: 1em;
+			width: 100%;
+			font-size: 1.5em;
+			font-weight: bold;
+			justify-content: center;
+			align-items: center;
+		}
+		.drag{
+			opacity: 0.7;
+			background-color: #00000033;
+			border-radius: 50%;
+			transition: border-radius 0.5s ease-in-out;
+		}
+		.flex-Main{
+			display: flex;
+			flex-direction: column;
+
+		}
+		.fMain{
+			flex: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="app">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		  <a class="navbar-brand" href="#">Chits</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-lab	el="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">Share to<span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Options
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="#">Hide me</a>
+		          <a class="dropdown-item" href="#">Factory Reset</a>
+		          <div class="dropdown-divider"></div>
+		          <a class="dropdown-item" href="#">Exit</a>
+		        </div>
+		      </li>
+		    </ul>
+		    <form class="form-inline my-2 my-lg-0 chitsId" method="post">
+		      <input class="form-control mr-sm-2" type="text" placeholder="User Id" aria-label="Search">
+		      <button class="btn btn-outline-success my-2 my-sm-0 disabled" type="submit">Change</button>
+		    </form>
+		  </div>
+		</nav>
+
+		<div class="container mainBody pt-2 pb-2 d-flex flex-row" >
+			<div class="d-flex flex-column border-right pr-2 sidebarr itemm">
+				<div class="item friend"><div class="friendName"><i class="fa fa-plus-circle" aria-hidden="true"></i> Send To
+</div></div>
+				<div class="item friend"><div class="friendName"><i class="fa fa-plus-circle" aria-hidden="true"></i> Send To
+</div></div>
+				<div class="item friend"><div class="friendName"><i class="fa fa-plus-circle" aria-hidden="true"></i> Send To
+</div></div>
+				<div class="item friend"><div class="friendName"><i class="fa fa-plus-circle" aria-hidden="true"></i> Send To
+</div></div>
+				<div class="item friend"><div class="friendName"><i class="fa fa-plus-circle" aria-hidden="true"></i> Send To
+</div></div>
+				<div class="item friend"><div class="friendName"><i class="fa fa-plus-circle" aria-hidden="true"></i> Send To
+</div></div>
+				<div class="item friend"><div class="friendName"><i class="fa fa-plus-circle" aria-hidden="true"></i> Send To
+</div></div>
+				<div class="item friend"><div class="friendName"><i class="fa fa-plus-circle" aria-hidden="true"></i> Send To
+</div></div>
+				<div class="item friend"><div class="friendName"><i class="fa fa-plus-circle" aria-hidden="true"></i> Send To
+</div></div>
+				<div class="item friend"><div class="friendName"><i class="fa fa-plus-circle" aria-hidden="true"></i> Send To
+</div></div>
+				<div class="item friend"><div class="friendName"><i class="fa fa-plus-circle" aria-hidden="true"></i> Send To
+</div></div>
+				<div class="item friend"><div class="friendName"><i class="fa fa-plus-circle" aria-hidden="true"></i> Send To
+</div></div>
+				<div class="item friend"><div class="friendName"><i class="fa fa-plus-circle" aria-hidden="true"></i> Send To
+</div></div>
+				
+			</div>
+			<form action="" class = "flex-Main item itemMain" ondrop="dropp(event);" ondragover="allowDrop(event);">
+				<div class="fMain top"></div>
+				<div class="">
+					<div class="align-self-center justify-self-center"> Drop File(s) <i class="fas fa-file-upload" ></i></div>
+					<input type="file" class="fileInput"/>
+				</div>
+				<div class="fMain bottom"></div>
+			</form>
+		</div>
+
+
+	</div>
+
+
+	<script>
+		let form = document.querySelector('.chitsId');
+		const itemMain = document.querySelector(".itemMain");
+		form.addEventListener('submit', (e)=>{
+			e.preventDefault();
+			console.log(e.target.children[0].value);
+		});
+		itemMain.addEventListener("drop", dropp)
+		var dropp = (ev)=>{
+			console.log('File(s) dropped');
+			ev.preventDefault();
+			itemMain.classList.remove("drag");
+			console.log(ev.dataTransfer);
+		}
+		var allowDrop = (ev)=>{
+			// ev.preventDefault();
+			if("drag" in itemMain.classList){;
+			}else{
+				itemMain.classList.add("drag");
+			}
+		};
+		var dropLeave = (ev) =>{
+			itemMain.classList.remove("drag");
+		}
+		
+	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!--
+
+server needs the following routes
+/user 
+
+
+ -->
+
+ <!-- 
+
+color theme
+DAD6D6
+92BFB1
+F4AC45
+694A38
+A61C3C
+  -->

@@ -1,0 +1,15 @@
+{
+  "name": "chits",
+  "version": "1.0.0",
+  "description": "computer has installed tochis sharing app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Tochi Bedford",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "electron": "^9.1.2",
+    "getmac": "^5.13.0"
+  }
+}
